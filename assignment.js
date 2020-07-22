@@ -27,6 +27,47 @@ console.log("Total wood need = ",totalWoodNeed," pieces");
 var totalWoodNeed = woodCalculator(12, 3, 2);
 console.log("Total wood need = ",totalWoodNeed," pieces");
 
+// Assignment-3
+
+function brickCalculator(floor){
+    if(floor<=10){
+        totalBrick = 10*15*1000;
+        return totalBrick;
+    }
+    else if(floor<=20){
+        var calculation1 = 10*15*1000;
+        var due = floor-10;
+        var calculation2 = due*12*1000;
+        totalBrick = calculation1 + calculation2;
+        return totalBrick;
+    }
+    else {
+        var calculation1 = 10*15*1000;
+        var calculation2 = 10*12*1000;
+        var due = floor-20;
+        var calculation3 = due*10*1000;
+        totalBrick = calculation1 + calculation2 + calculation3;
+        }
+        return totalBrick;
+    }
+    brickCalculator(8);
+    console.log("Total bricks need =",totalBrick,"pieces");
+    brickCalculator(15);
+    console.log("Total bricks need =",totalBrick,"pieces");
+    brickCalculator(25);
+    console.log("Total bricks need =",totalBrick,"pieces");
 
 
+// Assignment-4
 
+function tinyFriend(name){
+    shortName = name[0];
+    for(var i=0; i<name.length; i++){
+        var compareName = name[i];
+        if(compareName.length<shortName.length)
+        shortName = compareName;
+    }
+    return shortName;
+}
+var shortNameIs = tinyFriend(["Jackson", "Rico", "Jon", "Michel", "Jourge"]);
+console.log("Tiny name is =",shortNameIs);
